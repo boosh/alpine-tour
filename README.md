@@ -36,15 +36,17 @@ To create a tour add the directive to the element as following.
 The tour will be ordered by the step.
 Either bottom, top, left or right will let the directive know where to show the pop-up with the information.
 ```html
-<div x-tour:bottom="{step: 1, title: 'Example title', description: 'This is the description'}"></div>
-<div x-tour:top="{step: 2, title: 'Example title', description: 'This is the description'}"></div>
-<div x-tour:left="{step: 3, title: 'Example title', description: 'This is the description'}"></div>
-<div x-tour:right="{step: 4, title: 'Example title', description: 'This is the description'}"></div>
+<div x-data>     <!-- Note: the tour must be inside an element with x-data to be run -->
+    <div x-tour.bottom="{step: 1, title: 'Example title', description: 'This is the description'}"></div>
+    <div x-tour.top="{step: 2, title: 'Example title', description: 'This is the description'}"></div>
+    <div x-tour.left="{step: 3, title: 'Example title', description: 'This is the description'}"></div>
+    <div x-tour.right="{step: 4, title: 'Example title', description: 'This is the description'}"></div>
+</div>
 ```
 
 To start the tour add the following.
 ```html
-<button x-tour:start>Start tour</button>
+<button x-tour.start>Start tour</button>
 ```
 
 The tour can be navigated using the left and right arrow key, and can be closed using the escape button (or the cross in the pop-up).

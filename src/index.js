@@ -115,6 +115,14 @@ export default function (Alpine) {
                         this.dotStyle = `left: -1.5rem; top: 50%; transform: translateY(-50%);`;
                         break;
                 }
+                
+                Alpine.nextTick(() => {
+                    this.activeStep.el.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                        inline: 'start'    
+                    });
+                });
             },
             increaseStep() {
                 this.activeStep.el.style.zIndex = 0;

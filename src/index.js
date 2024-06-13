@@ -117,16 +117,19 @@ export default function (Alpine) {
                 }
             },
             increaseStep() {
+                this.activeStep.el.style.zIndex = 0;
                 this.step++;
                 this.activeStep = this.steps[this.step];
                 this.calculatePosition();
             },
             decreaseStep() {
+                this.activeStep.el.style.zIndex = 0;
                 this.step--;
                 this.activeStep = this.steps[this.step];
                 this.calculatePosition();
             },
             resetStep() {
+                this.activeStep.el.style.zIndex = 0;
                 this.step = 0;
                 this.activeStep = null;
             },

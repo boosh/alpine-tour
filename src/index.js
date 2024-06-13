@@ -26,6 +26,9 @@ export default function (Alpine) {
                             <div x-show="$store.tour.activeStep?.modifier === 'bottom'" class="w-6 overflow-hidden inline-block absolute" style="top: -1rem; left: 50%; transform: translateX(-50%)">
                              <div class=" h-4 w-4 bg-white rotate-45 transform origin-bottom-left"></div>
                             </div>
+                            <div x-show="$store.tour.activeStep?.modifier === 'top'" class="w-6 overflow-hidden inline-block absolute" style="bottom: -1rem; left: 50%; transform: translateX(-50%)"> 
+                              <div class=" h-4 w-4 bg-white -rotate-45 transform origin-top-left"></div>
+                            </div>
                             <div x-show="$store.tour.activeStep?.modifier === 'right'" class="w-4 overflow-hidden inline-block absolute" style="left: -1rem; top: 50%; transform: translateY(-50%)">
                              <div class=" h-6 bg-white -rotate-45 transform origin-top-right"></div>
                             </div>
